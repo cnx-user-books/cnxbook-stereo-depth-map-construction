@@ -1,0 +1,61 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+  <title>SIFT Alogrithm Feature Extraction Example</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36388</md:content-id>
+  <md:title>SIFT Alogrithm Feature Extraction Example</md:title>
+  <md:abstract>An example of the characteristics and abilities of feature matching, using SIFT.</md:abstract>
+  <md:uuid>fff9ff3a-2d5e-42a3-8c28-01493bb87ea1</md:uuid>
+</metadata>
+
+<content>
+    <section id="id1167417713690">
+      <title>Feature Extraction</title>
+      <section id="id1167430842675">
+        <title>Application of Feature Extraction</title>
+        <para id="id1167422214547">Two images of the same bear on a desk taken at different horitzonal positions relative to the subject were taken and anaylzeed using the SIFT algorithm implemented in Matlab with the aid of a toolbox by VLFeat. </para>
+        <para id="id1167428588833">
+          <figure id="id1167418500492">
+            <title>Picture A</title>
+            <media id="id1167418500492_media" alt="">
+              <image mime-type="image/jpg" src="../../media/graphics1-f59a.jpg" id="id1167418500492__onlineimage" height="352" width="524"/>
+            </media>
+            <caption>Taken on a DSLR Nikon D3000 </caption>
+          </figure>
+        </para>
+        <figure id="id1167418896584">
+          <title>Picture B</title>
+          <media id="id1167418896584_media" alt="">
+            <image mime-type="image/jpg" src="../../media/graphics2-c2a0.jpg" id="id1167418896584__onlineimage" height="351" width="524"/>
+          </media>
+          <caption>A horizontal shift from camera position in Picture A</caption>
+        </figure>
+        <para id="id1167429651364">After the SIFT algorithm has been applied corresponding features are very clear and intuitive. </para>
+        <para id="id1167437821238"/>
+        <figure id="id1167418497360">
+          <title>Zoomed In Feature Extraction Picutre A</title>
+          <media id="id1167418497360_media" alt="">
+            <image mime-type="image/jpg" src="../../media/graphics3-41c4.jpg" id="id1167418497360__onlineimage" height="450" width="600"/>
+          </media>
+          <caption>Features(Green) with scale and orientation</caption>
+        </figure>
+        <para id="id1167419135531"/>
+        <figure id="id1167429036275">
+          <title>Zoomed In Feature Extraction Picutre B</title>
+          <media id="id1167429036275_media" alt="">
+            <image mime-type="image/jpg" src="../../media/graphics4-7a0d.jpg" id="id1167429036275__onlineimage" height="450" width="600"/>
+          </media>
+          <caption>Features(Green) with scale and orientation</caption>
+        </figure>
+        <para id="id1167432361167">It is clear that the SIFT program chooses the same features of the same scale and orientation in each image, and there is a clear match between the two images.</para>
+        <figure id="id1167425523350">
+          <title>Matching Features</title>
+          <media id="id1167425523350_media" alt="">
+            <image mime-type="image/jpg" src="../../media/graphics5-cc68.jpg" id="id1167425523350__onlineimage" height="213" width="600"/>
+          </media>
+          <caption>Black line drawn from center of corresponding features.</caption>
+        </figure>
+        <para id="id1167419413818"/>
+      </section>
+    </section>
+  </content>
+</document>

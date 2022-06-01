@@ -1,0 +1,98 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+  <title>Depth Maps</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36392</md:content-id>
+  <md:title>Depth Maps</md:title>
+  <md:abstract>Utilizing the SIFT algorithm and Minimization to achieve depths and a depth map.</md:abstract>
+  <md:uuid>5cadbc25-a594-40f2-b46c-c8ef22bbf629</md:uuid>
+</metadata>
+
+<content>
+    <section id="id1166010604977">
+      <title>Depth Map Generation Using SIFT and Minimzation Alogorithms</title>
+      <section id="id1166036632894">
+        <title>Feature Depths to Depth Map</title>
+        <para id="id1166013472931">Using the griddata and surf functions in Matlab, we are able to interpolate the z data of each feature in 3D space, to see what the rest of the regions in between features is doing. Then by laying an original picture over this data we can see visually how deep regions of our photographs are in space.</para>
+        <section id="id1166017909840">
+          <title>Given these Two Images:</title>
+          <figure id="id7778731">
+            <title>Picture A</title>
+            <media id="id7778731_media" alt="">
+              <image mime-type="image/jpg" src="../../media/graphics1-01f5.jpg" id="id7778731__onlineimage" height="401" width="600"/>
+            </media>
+            <caption>Bear on a desk, with a wall and a deep hallway.</caption>
+          </figure>
+          <figure id="id1166014985319">
+            <title>Picture B</title>
+            <media id="id1166014985319_media" alt="">
+              <image mime-type="image/jpg" src="../../media/graphics2-24cf.jpg" id="id1166014985319__onlineimage" height="401" width="600"/>
+            </media>
+            <caption>Same scene,different camera position.</caption>
+          </figure>
+          <para id="id1166011504143"/>
+        </section>
+        <section id="id1166011129605">
+          <title>Applying our least squares alogroithm:</title>
+          <figure id="id1166012678396">
+            <title>Depth Map with SIFT and Least Squares Minimzation</title>
+            <media id="id1166012678396_media" alt="">
+              <image mime-type="image/jpg" src="../../media/graphics3-99f7.jpg" id="id1166012678396__onlineimage" height="553" width="599"/>
+            </media>
+          </figure>
+          <note id="id1166027153898" type="Note">Aside from the extremes in the very front and back left corner, depths make sense. Shallow over bear, deeper to the left with the near by wall, and very deep to the right with the door.</note>
+          <para id="id1166019686797">As was mentioned earlier, the least squares method is more unstable and is visably so with the extremes in the front of the photo and in the back left corner. However the rest of the photo makes intuitive sense. All the reported Z values are off by a scale factor due to the explained ambiguity. </para>
+          <para id="id2809986"/>
+          <figure id="id1166010206162">
+            <title>Generalized Range of Depths (proportional to real value in inches)</title>
+            <media id="id1166010206162_media" alt="">
+              <image mime-type="image/jpg" src="../../media/graphics4-598b.jpg" id="id1166010206162__onlineimage" height="437" width="712"/>
+            </media>
+          </figure>
+          <note id="id1166011039876" type="Note">Region 200 to 600 is the bear’s depth, 600 to 1000 is the background(wall), and 1000 to the end is the extreme depth represented by the hallway. </note>
+          <para id="id1166019963232">Porportionally this graph makes sense because the wall was in fact about 3 times as far as the bear was to the camera, and the depth of the hallway was obviously extreme compared to the wall because we could not see the end of it in the photo, it seemed to go to infinity. </para>
+          <para id="id1166012766366">Therefore these results and the corresponding depth map of the two steoro images fits our expectations. </para>
+          <para id="id1166013600157"/>
+        </section>
+      </section>
+      <section id="id1166014211697">
+        <title>Depth Map Simply Using Disparites </title>
+        <figure id="id1166025756562">
+          <title>Depth Map just using Disparites as the Basis</title>
+          <media id="id1166025756562_media" alt="">
+            <image mime-type="image/jpg" src="../../media/graphics5-fe40.jpg" id="id1166025756562__onlineimage" height="385" width="599"/>
+          </media>
+          <caption>Bear raised,hallway w/ extreme depth</caption>
+        </figure>
+        <para id="id1166012838382">This method is much more stable and demesntrates better quick changes in depth than the previous method. This algorithm understand that there is a huge drop from the depth of the bear to the hallway to the right of it.</para>
+        <para id="id1166012807893">Data for this section is not important because all values do not take into consideration 3D space, simply the disparities of the features and the camera positions. </para>
+        <para id="id1166022112877"/>
+      </section>
+      <section id="id1166018909572">
+        <title>Another Example</title>
+        <para id="id1166014211375">To further test our alogorithm on a large depth, we shot two stero images of the Duncan wall way and used the Disparity method as shown above to get an idea of the relative depths. </para>
+        <figure id="id1166022330327"><title>Orignal Photo of Duncan Hall</title><media id="id1166022330327_media" alt="">
+            <image mime-type="image/jpg" src="../../media/graphics6.jpg" id="id1166022330327__onlineimage" height="468" width="600"/>
+          </media>
+          
+        <caption>Large Depth w/terminating end,and shallow walls.</caption></figure>
+        <para id="id3192442"/>
+        <figure id="id1166013107346">
+          <title>Depth Map using Disparites Angle 1</title>
+          <media id="id1166013107346_media" alt="">
+            <image mime-type="image/jpg" src="../../media/graphics7.jpg" id="id1166013107346__onlineimage" height="412" width="600"/>
+          </media>
+        </figure>
+        <note id="id1166013874574" type="Note">Notice large Depth that terminates correctly where the end of the hall should be. </note>
+        <para id="id1166022200481"/>
+        <figure id="id6168119">
+          <title>Depth Map using Disparites Angle 2</title>
+          <media id="id6168119_media" alt="">
+            <image mime-type="image/jpg" src="../../media/graphics8.jpg" id="id6168119__onlineimage" height="435" width="582"/>
+          </media>
+        </figure>
+        <note id="id3251070" type="Note">Notice how Side Wall Depth is accurate with jagged depths that match the surface of the real walls in Duncan Hall. </note>
+        <para id="id1166013452097">Once again we see that this algorithm is very powerful in transforming two stero images into a depth map, that is also very accurate in its proportional depth from camera. </para>
+      </section>
+    </section>
+  </content>
+</document>

@@ -1,0 +1,24 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+  <title>Triangulation of Feature Points</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36391</md:content-id>
+  <md:title>Triangulation of Feature Points</md:title>
+  <md:abstract>Using least squares regression with corresponding feature points and camera position, triangulation can be achieved.</md:abstract>
+  <md:uuid>439ef9f0-a4af-407e-a302-5e20941d2938</md:uuid>
+</metadata>
+
+<content>
+    <section id="id1164613359808">
+      <title>Minimization of Corresponding Feature’s Line Equations</title>
+      <section id="id1164616178922">
+        <title>Least Squares Method</title>
+        <para id="id1164620710668"> Granted in our attempt to solve this problem, one knows the <term>position</term> and <term>disparity</term> of the cameras, our problem becomes a <term>minimization problem</term>. Due to the imperfections inherent in photography, the features of one photo will never truly intersect with that of another. So instead of trying to solve for the intersection of two lines, one can perform <term>a least squares minimzation</term> to see where the two lines in space gets closest. Once this value has been obtained, it can be used back into either line equation to find the corresponding point in 3D space. This point with x,y,and z occridnates, z being the distance the point exists away from the camera, now has a porpotial depth to that of the camera, and image plane. If this process is done for each corresponding set of features in both images, we arive at depths of all our feature points from the camera. </para>
+      </section>
+      <section id="id1164620472490">
+        <title>Disparities Error</title>
+        <para id="id1164613762350"> The least squares method is the most realistic. Given the focal length, and positions of the camera the entire world can be recreated, with porportional scale and correct orientation. However, this method in practice is the most unstable, a couple of incorrect matches with the SIFT algorithm can reprt incorrect depths and throw off a whole region of the depth map. In addition even with the least squares method, if the feature points are incorrect the depth will be wrong. This is why a very high threshold for the SIFT algorithm is desirable to get rid of less correlated matches. Our group would rather have fewer features but be correct, than a lot of features with high error.</para>
+        <para id="id1164619547048"> In response to this instability, we also plotted porportial depth maps simply using disparities of the camera and the corresponding features to get a sense of the relative depths. This method does not out put correct values for Z but is much more stable than potential incorrect least sqaures method pinpointing. </para>
+      </section>
+    </section>
+  </content>
+</document>

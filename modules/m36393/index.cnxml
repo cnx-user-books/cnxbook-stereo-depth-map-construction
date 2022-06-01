@@ -1,0 +1,18 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+  <title>Introduction to Computer Vision</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36393</md:content-id>
+  <md:title>Introduction to Computer Vision</md:title>
+  <md:abstract>Introduction to Stereo Imaging and the associated project.</md:abstract>
+  <md:uuid>bf369962-1bc5-43b3-ae4b-a07332ca61c6</md:uuid>
+</metadata>
+
+<content>
+    <section id="id1171399883247">
+      <title>Stereo Imaging </title>
+      <para id="id1171399968871">The human eyes both take independent “photos” at different angles and positons. The remarkable thing about the human brain is that it is able to use both images to recreate the 3D world. It does this very quickly and remarkably accuratly. </para>
+      <para id="id2489019"> To replicate this in computers is a crucial part of image processing and robotics. A computer’s ability to understand its own position compared to its surroundings is a crucial step forward. This would allow the ability for robots to go where humans could not and “learn” useful information about their surroundings. </para>
+      <para id="id1171398714569"> In the scope of this project we try to replicate basic Stereo Imaging given two photos taken at different horiztonal positions from eachother. We are going to rebuild the 3D space possible with two images, with depths from the camera plane.</para>
+    </section>
+  </content>
+</document>

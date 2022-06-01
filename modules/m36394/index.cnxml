@@ -1,0 +1,27 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+
+<title>Conclusion and Acknowledgements</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36394</md:content-id>
+  <md:title>Conclusion and Acknowledgements</md:title>
+  <md:abstract/>
+  <md:uuid>1f78c9e5-4664-43d0-b12d-8e0acee56b8c</md:uuid>
+</metadata>
+
+<content>
+  <para id="eip-900"><title>Conclusion</title>In conclusion replicating Stereo Imaging was a success. We achieved proportional depth maps, that accurately map the 3D space of a scene given two images of the same scene at different angles. Granted there was a lot of control in this experiment the given camera positions and  disparities, it was prone to many instabilities. These instabilities did not ruin the depth map, but threw off certain regions that could be accounted for. However when two photos were deliberately taken with terminating ends in view, the algorithm work very well.  
+
+Future scope of this project would be given many images of the same scene at many different angles and without camera positions we could recreate a complete 3D replication of the scene, object. This could then be used to replicate intricate worlds and scenes with incredible detail. 
+
+</para><para id="eip-120"><title>Acknowledgements</title>A big thanks to our Professor Richard Baraniuk, who led a fantastic class, our TA Matthew Moravec for putting in all his effort and work,the rest of the ELEC 301 Team (Connexions Group,ECE Department,Study Session TAs, and our peers of the ELEC Class of 2012).
+A special thanks to Aswin Sankaranarayanan for being a fantastic mentor and teaching us material that was beyond the scope of our current knowledge to achieve the goal of this project.
+</para><para id="eip-543">Thanks for a Great Semester. 
+
+Naji Barnes McFarlane
+Pawel Mikolajczyk
+Emmanuel Fuentes</para><para id="delete_me">
+     <!-- Insert module text here -->
+  </para>
+</content>
+
+</document>

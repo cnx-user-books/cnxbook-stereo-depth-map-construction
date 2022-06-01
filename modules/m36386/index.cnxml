@@ -1,0 +1,21 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+  <title>Correspondence Problem</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36386</md:content-id>
+  <md:title>Correspondence Problem</md:title>
+  <md:abstract>Briefly explains Stereo Imaging using the SIFT algorithm</md:abstract>
+  <md:uuid>53355385-f22b-495a-b809-8e9095ce2e70</md:uuid>
+</metadata>
+
+<content>
+    <section id="id1164943040549">
+      <title>Correspondance Problem </title>
+      <section id="id1164920994402">
+        <title>Stereo Image Matching</title>
+        <para id="id1164939842106"> Given any two images of the same scene one may want to understand where given parts of the picture exist in the other. Most often is it virtually impossible to take identical picutres with the same scene in exactly the same positions for two or more images. </para>
+        <para id="id1164927015163"> There are two methods of corresponding two images. The classical method is to analyze a location on an image and see where is it most like on the other image. This is called the <term>Correlation-Based Method</term>. The more robust and practical method is the <term>Feature-Based Method</term> that indentifies unqiue features in one image and finds the same features in the other image. </para>
+        <para id="id1164943463915"> A <term>Feature</term> is best desribed as a unique piece of the image that is not repeated anywhere else in the picture. There are many methods to indentifing features in a given image, however the method that lent itself well to our partcular problem of replicating stereo imaging is the SIFT Alogrithm.</para>
+      </section>
+    </section>
+  </content>
+</document>

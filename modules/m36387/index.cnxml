@@ -1,0 +1,20 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+  <title>SIFT Alogrithm</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36387</md:content-id>
+  <md:title>SIFT Alogrithm</md:title>
+  <md:abstract>Briefly explains the general SIFT algorithm, pros and cons.</md:abstract>
+  <md:uuid>927068b2-784b-4534-83f8-c04a1f42ae4f</md:uuid>
+</metadata>
+
+<content>
+    <section id="id1170109297748">
+      <title>SIFT Alogrithm</title>
+      <section id="id1170113191173">
+        <title>Scale Invariant Feature Transform Alogrithm </title>
+        <para id="id1170089750384"> This algorithm was developed by David Lowe in 1999 at the Univeristy of British Columbia. Through it methodology the <term>SIFT Alogrithm</term> is invariant to scale, light,noise and other commons changes that can effect an object’s representation in an image. The alogrithm best identifies objects with clear edges, points of high contrast, and stable fundamental geometry that will not change from picture to picture. The features the method displays, not only have their respective x,y corrdinates in the photo, but also have an oriention in radians, and a scale factor to describe the size of the feature. This allows for accurate description of the uniquness of the feature. All of this lends itself well to solving the correspondance problem presented with two or more images. </para>
+        <para id="id1170103437009"> Regardless of scale or orientation or position the SIFT alogrith will be able to tell where a particular feature is based on the geometry of the photo and the features neariest to the feature being matched, as well as its descriptors. </para>
+      </section>
+    </section>
+  </content>
+</document>

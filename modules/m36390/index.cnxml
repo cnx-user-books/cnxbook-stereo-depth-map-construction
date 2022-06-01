@@ -1,0 +1,26 @@
+<document xmlns="http://cnx.rice.edu/cnxml">
+  <title>Triangulation</title>
+<metadata xmlns:md="http://cnx.rice.edu/mdml">
+  <md:content-id>m36390</md:content-id>
+  <md:title>Triangulation</md:title>
+  <md:abstract>Explains the initial set up, as well as its short comings.</md:abstract>
+  <md:uuid>538ef23e-d99a-4e1c-9b42-7d4a6d68d68b</md:uuid>
+</metadata>
+
+<content>
+    <section id="id1166017912199">
+      <title>Triangulation </title>
+      <para id="id1166027141581"> Once the SIFT algorithm has been applied, one has positions of corresponding features in each image. To rebuild each point in 3D space, to undo the projection induceded by the camera, we represent our camera using the pin hole model.This assumption allowas us to draw a line from the camera position to the feature, obtaining an equation for a line that can be used to approximate furthur points down that line beyond our feature. Obtaining equations for each photo and its respective camera we can build a system of equations to see where these two lines intersect. The position of camera one and camera two are varied by some horizontal distance or <term>disparity</term>, similarly as features in photo one and photo two. The figure shows the general idea behind this reconstuction</para>
+      <figure id="id1166011740101">
+        <title>3D Respresentation</title>
+        <media id="id1166011740101_media" alt="">
+          <image mime-type="image/png" src="../../media/graphics1.png" id="id1166011740101__onlineimage" height="380" width="598"/>
+        </media>
+        <caption>Bear at two different angles with corresponding feature.</caption>
+      </figure>
+      <para id="id1166011648751">However this is a “perfect” model that inherently has many flaws. One there is going to be a scale problem because we are not sure if we took the picture with a small or big camera of a small or big “world.” This trick can be seen in old movies when you see Godzilla destroying a city, when it is actually a man in a costume jumping on blocks or when a big building is simply a clay miniature shot up close. </para>
+      <para id="id1166026857731">The second problem is that this method requires we know the position and the disparity of the cameras before hand to solve this eqation. </para>
+      <para id="id1166013245972">Lastly, due to imperfections that will always exist in a photograph, the corresponding features have both vertical and horizontal disparities, not just one or the other, therefore the lines will not truly ever intersect. </para>
+    </section>
+  </content>
+</document>
